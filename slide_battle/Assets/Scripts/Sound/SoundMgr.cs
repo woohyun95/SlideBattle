@@ -8,12 +8,12 @@ public class SoundMgr : Singleton<SoundMgr>
     [SerializeField] public Toggle BgmToggle;
     [SerializeField] public Toggle SoundToggle;
 
+    [SerializeField] public AudioClip defaultBgm;
+    [SerializeField] public AudioClip feverBgm;
+
+
     public AudioSource Bgm;
     public AudioSource EffectSound;
-
-    void Start()
-    {
-    }
 
     public void ToggleBgm(bool audioIn)
     {

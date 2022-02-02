@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f49afe519697f4f4cbcfa3db605b47fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinGetSound: {fileID: 8300000, guid: d584414b03800194b861679f0d4507a9, type: 3}
+  coinGetSound: {fileID: 8300000, guid: ecca825a91b06954dbacddcba36b3290, type: 3}
   rotateSpeed: 1
 --- !u!136 &5115339687279977624
 CapsuleCollider:
@@ -74,8 +74,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
+  m_audioClip: {fileID: 8300000, guid: ecca825a91b06954dbacddcba36b3290, type: 3}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

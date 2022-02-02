@@ -12,6 +12,10 @@ public class Coin : MonoBehaviour
         audioSource = gameObject.GetComponent<AudioSource>();
         audioSource.clip = coinGetSound;
     }
+    private void OnEnable() {
+        PlayCoinSound(); 
+
+    }
     private void FixedUpdate() {
         Vector3 rotation = gameObject.transform.eulerAngles;
 

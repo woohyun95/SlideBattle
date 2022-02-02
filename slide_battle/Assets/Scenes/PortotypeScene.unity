@@ -1969,6 +1969,7 @@ RectTransform:
   m_Children:
   - {fileID: 1169841333}
   - {fileID: 1899905545}
+  - {fileID: 1569926885}
   m_Father: {fileID: 378800443}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2202,7 +2203,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1112683066}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SoundMgr, Assembly-CSharp
         m_MethodName: ToggleBgm
         m_Mode: 6
@@ -3479,7 +3480,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1112683068}
   - component: {fileID: 1112683067}
-  - component: {fileID: 1112683066}
   m_Layer: 0
   m_Name: MusicManager
   m_TagString: Untagged
@@ -3487,22 +3487,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1112683066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1112683065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2b87eea1804153499239bdad08e3477, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgmToggle: {fileID: 788756157}
-  SoundToggle: {fileID: 1147293484}
-  Bgm: {fileID: 1112683067}
-  EffectSound: {fileID: 1208014189}
 --- !u!82 &1112683067
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3513,11 +3497,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d404bada4b4840046ab0e78fb4b5873c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8653073efc244d64cb06e7faab9b7bda, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -3844,7 +3828,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1112683066}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SoundMgr, Assembly-CSharp
         m_MethodName: ToggleSound
         m_Mode: 6
@@ -4187,6 +4171,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BgmToggle: {fileID: 788756157}
   SoundToggle: {fileID: 1147293484}
+  defaultBgm: {fileID: 8300000, guid: 8653073efc244d64cb06e7faab9b7bda, type: 3}
+  feverBgm: {fileID: 8300000, guid: 90eae78e8ce85a849b5b0ca11b2de641, type: 3}
   Bgm: {fileID: 1112683067}
   EffectSound: {fileID: 1208014189}
 --- !u!82 &1208014189
@@ -4199,7 +4185,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 39d53561136876f4b8f048ca7e6af303, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8653073efc244d64cb06e7faab9b7bda, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0
   m_Pitch: 1
@@ -5099,6 +5085,153 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1559010767}
   m_CullTransparentMesh: 1
+--- !u!1 &1569926884
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1569926885}
+  - component: {fileID: 1569926887}
+  - component: {fileID: 1569926886}
+  - component: {fileID: 1569926888}
+  m_Layer: 5
+  m_Name: Fevertime
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1569926885
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569926884}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -61}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 616820571}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -761}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1569926886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569926884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: COIN FEVER TIME
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: e0d64e385b076f94eb347cd9325fab6a, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 720c2156b9566f4499dbde8caeed68d3, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 11400000, guid: 69a525efa7e6472eab268f6ea605f06e, type: 2}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 80
+  m_fontSizeBase: 80
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: -433.77026, y: 0, z: -446.41077, w: 118.12781}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1569926887
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569926884}
+  m_CullTransparentMesh: 1
+--- !u!114 &1569926888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569926884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cb84c40133ba0f46afb590d816e1b76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1613250760
 GameObject:
   m_ObjectHideFlags: 0
@@ -7178,7 +7311,7 @@ MonoBehaviour:
     givenPlayerHp: 7
     stageRange:
       minStageLevel: 1
-      maxStageLevel: 5
+      maxStageLevel: 1
     enemySpawnerSetting:
       SPAWN_OBJECT_TYPE: 0
       spawnTimeInterval: 3
@@ -7215,8 +7348,8 @@ MonoBehaviour:
   - stageSetLevel: 2
     givenPlayerHp: 6
     stageRange:
-      minStageLevel: 6
-      maxStageLevel: 10
+      minStageLevel: 2
+      maxStageLevel: 2
     enemySpawnerSetting:
       SPAWN_OBJECT_TYPE: 0
       spawnTimeInterval: 2.5
@@ -7238,25 +7371,25 @@ MonoBehaviour:
       - {fileID: 658565993817075405}
       objectPrefab: {fileID: 5544251630154843997, guid: a2a531f4a19b81f43bb70992df2a6a6a, type: 3}
     pillarSpawnerSetting:
-      SPAWN_OBJECT_TYPE: 0
+      SPAWN_OBJECT_TYPE: 2
       spawnTimeInterval: 0
       objectSpawnCountAtSameTime: 0
       totalObjectSpawnCount: 0
       spawnPositionList: []
-      objectPrefab: {fileID: 0}
+      objectPrefab: {fileID: 3151571325878696028, guid: c06e185df61534640abe8366549e239c, type: 3}
     holeSpawnerSetting:
-      SPAWN_OBJECT_TYPE: 0
+      SPAWN_OBJECT_TYPE: 3
       spawnTimeInterval: 0
       objectSpawnCountAtSameTime: 0
       totalObjectSpawnCount: 0
       spawnPositionList: []
-      objectPrefab: {fileID: 0}
+      objectPrefab: {fileID: 9048113276160138740, guid: 1f0e6a559c2fb5046b64e5db5d5a93ae, type: 3}
     feverTimeProbability: 30
   - stageSetLevel: 3
     givenPlayerHp: 5
     stageRange:
-      minStageLevel: 11
-      maxStageLevel: 15
+      minStageLevel: 3
+      maxStageLevel: 3
     enemySpawnerSetting:
       SPAWN_OBJECT_TYPE: 0
       spawnTimeInterval: 2.5
@@ -7269,12 +7402,12 @@ MonoBehaviour:
       - {fileID: 658565994706267916}
       objectPrefab: {fileID: 5208508480913598201, guid: f50da6037bb5247419358d212e5933a3, type: 3}
     oilSpawnerSetting:
-      SPAWN_OBJECT_TYPE: 0
+      SPAWN_OBJECT_TYPE: 1
       spawnTimeInterval: 0
       objectSpawnCountAtSameTime: 0
       totalObjectSpawnCount: 0
       spawnPositionList: []
-      objectPrefab: {fileID: 0}
+      objectPrefab: {fileID: 5544251630154843997, guid: a2a531f4a19b81f43bb70992df2a6a6a, type: 3}
     pillarSpawnerSetting:
       SPAWN_OBJECT_TYPE: 2
       spawnTimeInterval: 0
@@ -7287,18 +7420,18 @@ MonoBehaviour:
       - {fileID: 1173682665}
       objectPrefab: {fileID: 3151571325878696028, guid: c06e185df61534640abe8366549e239c, type: 3}
     holeSpawnerSetting:
-      SPAWN_OBJECT_TYPE: 0
+      SPAWN_OBJECT_TYPE: 3
       spawnTimeInterval: 0
       objectSpawnCountAtSameTime: 0
       totalObjectSpawnCount: 0
       spawnPositionList: []
-      objectPrefab: {fileID: 0}
+      objectPrefab: {fileID: 9048113276160138740, guid: 1f0e6a559c2fb5046b64e5db5d5a93ae, type: 3}
     feverTimeProbability: 40
   - stageSetLevel: 4
     givenPlayerHp: 5
     stageRange:
-      minStageLevel: 16
-      maxStageLevel: 25
+      minStageLevel: 4
+      maxStageLevel: 4
     enemySpawnerSetting:
       SPAWN_OBJECT_TYPE: 0
       spawnTimeInterval: 2
@@ -7337,18 +7470,18 @@ MonoBehaviour:
       - {fileID: 1173682665}
       objectPrefab: {fileID: 3151571325878696028, guid: c06e185df61534640abe8366549e239c, type: 3}
     holeSpawnerSetting:
-      SPAWN_OBJECT_TYPE: 0
+      SPAWN_OBJECT_TYPE: 3
       spawnTimeInterval: 0
       objectSpawnCountAtSameTime: 0
       totalObjectSpawnCount: 0
       spawnPositionList: []
-      objectPrefab: {fileID: 0}
+      objectPrefab: {fileID: 9048113276160138740, guid: 1f0e6a559c2fb5046b64e5db5d5a93ae, type: 3}
     feverTimeProbability: 50
   - stageSetLevel: 5
     givenPlayerHp: 4
     stageRange:
-      minStageLevel: 26
-      maxStageLevel: 30
+      minStageLevel: 5
+      maxStageLevel: 5
     enemySpawnerSetting:
       SPAWN_OBJECT_TYPE: 0
       spawnTimeInterval: 2
@@ -7370,14 +7503,14 @@ MonoBehaviour:
       objectSpawnCountAtSameTime: 0
       totalObjectSpawnCount: 0
       spawnPositionList: []
-      objectPrefab: {fileID: 0}
+      objectPrefab: {fileID: 5544251630154843997, guid: a2a531f4a19b81f43bb70992df2a6a6a, type: 3}
     pillarSpawnerSetting:
       SPAWN_OBJECT_TYPE: 2
       spawnTimeInterval: 0
       objectSpawnCountAtSameTime: 0
       totalObjectSpawnCount: 0
       spawnPositionList: []
-      objectPrefab: {fileID: 0}
+      objectPrefab: {fileID: 3151571325878696028, guid: c06e185df61534640abe8366549e239c, type: 3}
     holeSpawnerSetting:
       SPAWN_OBJECT_TYPE: 3
       spawnTimeInterval: 0
@@ -7393,8 +7526,8 @@ MonoBehaviour:
   - stageSetLevel: 6
     givenPlayerHp: 3
     stageRange:
-      minStageLevel: 31
-      maxStageLevel: 40
+      minStageLevel: 6
+      maxStageLevel: 6
     enemySpawnerSetting:
       SPAWN_OBJECT_TYPE: 0
       spawnTimeInterval: 2
@@ -7445,8 +7578,8 @@ MonoBehaviour:
   - stageSetLevel: 7
     givenPlayerHp: 3
     stageRange:
-      minStageLevel: 41
-      maxStageLevel: 50
+      minStageLevel: 7
+      maxStageLevel: 7
     enemySpawnerSetting:
       SPAWN_OBJECT_TYPE: 0
       spawnTimeInterval: 2
@@ -7704,6 +7837,7 @@ MonoBehaviour:
   feverTimeCoinCount: 50
   feverTimeCoinSpawnTimeInterval: 0.5
   defaultCoinSpawnTimeInterval: 5
+  feverText: {fileID: 1569926884}
 --- !u!108 &658565994089213988
 Light:
   m_ObjectHideFlags: 0

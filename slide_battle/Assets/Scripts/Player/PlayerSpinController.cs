@@ -13,13 +13,17 @@ public class PlayerSpinController : MonoBehaviour
         rigidbody = gameObject.GetComponent<Rigidbody>();
         speedLimit = gameObject.GetComponent<PlayerMovementController>().speedLimit;
     }
-    void Update()
+    void FixedUpdate()
     {
         spinSpeedMultiplier = rigidbody.velocity.magnitude/speedLimit;
 
         currentSpinSpeed = spinSpeedLimit * spinSpeedMultiplier;
 
         Vector3 rotation = gameObject.transform.eulerAngles;
+
+        if (rotation.y >= 360.0f || rotation.y <= -360.0f) {
+            rotation.y = 0.0f;
+        }
 
         rotation.y += currentSpinSpeed;
 

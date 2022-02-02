@@ -20,16 +20,13 @@ public class DataSaver : Singleton<DataSaver> {
             coin = 0;
         }
     }
-    void InitializeScoreStatus()
-    {
-        if (PlayerPrefs.HasKey("Score"))
-        {
+    void InitializeScoreStatus() {
+        if (PlayerPrefs.HasKey("Score")) {
             score = PlayerPrefs.GetInt("Score");
         }
-        else
-        {
+        else {
             score = 0;
-            PlayerPrefs.SetInt("Score",score);
+            PlayerPrefs.SetInt("Score", score);
         }
     }
 
@@ -40,19 +37,16 @@ public class DataSaver : Singleton<DataSaver> {
         SaveData();
     }
 
-    public void ResetCoinData()
-    {
+    public void ResetCoinData() {
         coin = 0;
     }
 
 
-    public void ResetScoreData()
-    {
+    public void ResetScoreData() {
         score = 0;
     }
 
-    public void ResetStageData()
-    {
+    public void ResetStageData() {
         latestStage = 1;
     }
 
@@ -68,18 +62,31 @@ public class DataSaver : Singleton<DataSaver> {
         latestStage = stage;
     }
 
-    public void SaveData()
-    {
-        PlayerPrefs.SetInt("Score",score);
-        PlayerPrefs.SetInt("Coin",coin);
-        PlayerPrefs.SetInt("Stage",latestStage);
+    public void SaveData() {
+        PlayerPrefs.SetInt("Score", score);
+        PlayerPrefs.SetInt("Coin", coin);
+        PlayerPrefs.SetInt("Stage", latestStage);
         PlayerPrefs.Save();
     }
-    public void LoadData()
-    {
-        score = PlayerPrefs.GetInt("Score");
-        coin = PlayerPrefs.GetInt("Coin");
-        latestStage = PlayerPrefs.GetInt("Stage");
+    public void LoadData() {
+        if (PlayerPrefs.HasKey("Score")) {
+            score = PlayerPrefs.GetInt("Score");
+        }
+        else {
+            score = 0;
+        }
+        if (PlayerPrefs.HasKey("Coin")) {
+            coin = PlayerPrefs.GetInt("Coin");
+        }
+        else {
+            coin = 0;
+        }
+        if (PlayerPrefs.HasKey("Stage")) {
+            latestStage = PlayerPrefs.GetInt("Stage");
+        }
+        else {
+            latestStage = 1;
+        }
     }
     public int GetStage() {
         return latestStage;

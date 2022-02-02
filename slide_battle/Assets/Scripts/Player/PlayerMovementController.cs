@@ -149,7 +149,7 @@ public class PlayerMovementController : MonoBehaviour {
                 }
                 break;
             case "Hole":
-                Destroy(gameObject);
+
                 break;
         }
 

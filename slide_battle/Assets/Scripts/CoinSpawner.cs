@@ -11,7 +11,7 @@ public class CoinSpawner : MonoBehaviour
     [SerializeField] int feverTimeCoinCount;
     [SerializeField] float feverTimeCoinSpawnTimeInterval;
     [SerializeField] float defaultCoinSpawnTimeInterval;
-
+    [SerializeField] GameObject feverText;
     List<GameObject> coinList;
 
     private void Awake()
@@ -43,12 +43,21 @@ public class CoinSpawner : MonoBehaviour
         if (randomNumber < probability)
         {
             Debug.Log("fever!");
+            SoundMgr.GetInstance().Bgm.clip = SoundMgr.GetInstance().feverBgm;
+            SoundMgr.GetInstance().Bgm.Play();
+            feverText.SetActive(true);   
             StartCoroutine("SpawnFeverCoin");
         }
     }
+
+    public void EndFevertime() {
+        SoundMgr.GetInstance().Bgm.clip = SoundMgr.GetInstance().defaultBgm;
+        SoundMgr.GetInstance().Bgm.Play();
+        feverText.SetActive(false);
+        StopCoroutine("SpawnFeverCoin");
+    }
     public void TriggerDefaultCoinSpawn()
     {
-        Debug.Log("1213");
         StartCoroutine("SpawnCoinDefault");
     }
     public void StopEveryCoinSpawn()
@@ -70,6 +79,9 @@ public class CoinSpawner : MonoBehaviour
         while (count <= feverTimeCoinCount) {
             SpawnCoin();
             count++;
+            if (count >= feverTimeCoinCount) {
+                EndFevertime();
+            }
             yield return new WaitForSeconds(feverTimeCoinSpawnTimeInterval);
         }
     }

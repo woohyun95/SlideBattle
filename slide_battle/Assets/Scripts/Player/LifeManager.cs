@@ -22,6 +22,7 @@ public class LifeManager : Singleton<LifeManager> {
     }
     public void NotifyGameOver() {
         Debug.Log("Game OVER");
+        
         Observers.GetInstance().panelHandler.SetPanelStatus(ENUM_PANEL_STATUS.GAME_OVER);
         Observers.GetInstance().panelHandler.NotifyObservers();
         StageManager.GetInstance().gameObject.GetComponent<CoinSpawner>().StopEveryCoinSpawn();

@@ -74,6 +74,7 @@ public class StageManager : Singleton<StageManager>
         SetUpSpawners();
         coinSpawner.TriggerDefaultCoinSpawn();
         DebugCurrentStageInfo();
+        StartPanelUI.GetInstance().UpdateUI();
     }
 
     public void SetEnemySpawnerOn() {

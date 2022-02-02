@@ -11,7 +11,7 @@ public class EnemyAnimationController : MonoBehaviour
     }
 
     private void Update() {
-        if(status.currentStatus == ENUM_ENEMY_STATUS.STOP) {
+        if(status.currentStatus != ENUM_ENEMY_STATUS.BOUNCE) {
             SetWalkingAnimation();
         }   
     }

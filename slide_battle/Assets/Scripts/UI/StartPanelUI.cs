@@ -2,14 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-public class StartPanelUI : MonoBehaviour
+public class StartPanelUI : Singleton<StartPanelUI>
 {
     [SerializeField] public TextMeshProUGUI stage;
     [SerializeField] public TextMeshProUGUI gold;
-
-    private void OnEnable() {
-        UpdateUI();
-    }
 
     public void UpdateUI() {
         UpdateStageUI();
