@@ -112,5 +112,9 @@ public class EnemyMovementController : MonoBehaviour {
              currentStatus = ENUM_ENEMY_STATUS.COLLIDE_WITH_PILLAR;
             CollideEnemyToPillar();
         }
+        else if(collision.gameObject.tag == "Hole") {
+            currentStatus = ENUM_ENEMY_STATUS.COLLIDE_WITH_PILLAR;
+            CollideEnemyToPillar();
+        }
     }
 }

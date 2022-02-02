@@ -10,8 +10,8 @@ public class OutArea : MonoBehaviour {
                 LifeManager.GetInstance().KillPlayer();
                 break;
             case "Enemy":
-                DataSaver.GetInstance().AddScore(1);
-                StageManager.GetInstance().AddCurrentStageScore(1);
+                DataSaver.GetInstance().AddScore(10);
+                StageManager.GetInstance().AddCurrentStageScore(10);
                 InGameUI.GetInstance().UpdateScoreUI();
                 if (StageManager.GetInstance().IsStageCleared()) {
                     StageManager.GetInstance().StageClear();

@@ -13,8 +13,9 @@ public class LifeManager : Singleton<LifeManager> {
         currentLife -= amount;
         if (currentLife < 0) currentLife = 0;
         if (IsPlayerDead()) {
-
-            NotifyGameOver();
+            if (Observers.GetInstance().panelHandler.GetCurrentPanelStatus() == ENUM_PANEL_STATUS.IN_GAME) {
+                NotifyGameOver();
+            }
         }
     }
     public void KillPlayer() {
@@ -22,7 +23,7 @@ public class LifeManager : Singleton<LifeManager> {
     }
     public void NotifyGameOver() {
         Debug.Log("Game OVER");
-        
+        StageManager.GetInstance().gameObject.GetComponent<CoinSpawner>().EndFevertime();
         Observers.GetInstance().panelHandler.SetPanelStatus(ENUM_PANEL_STATUS.GAME_OVER);
         Observers.GetInstance().panelHandler.NotifyObservers();
         StageManager.GetInstance().gameObject.GetComponent<CoinSpawner>().StopEveryCoinSpawn();

@@ -43,7 +43,7 @@ public class PlayerMovementController : MonoBehaviour {
             rigidbody.velocity = new Vector3(0, 0, 0);
             directionVector = new Vector3(0,0,0);
             transform.position = PlayerSpawnPosition.position;
-            
+            SetCharacterStatus(EnumPlayerStatus.IDLE);
         }
     }
 

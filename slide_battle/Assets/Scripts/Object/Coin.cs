@@ -25,8 +25,10 @@ public class Coin : MonoBehaviour
     }
 
     public void PlayCoinSound() {
-        if(SoundMgr.GetInstance().SoundToggle.isOn)
-        audioSource.Play();
+        if (SoundMgr.GetInstance().SoundToggle.isOn) { audioSource.Play(); }
+        else {
+            audioSource.mute = true;
+        }
     }
 
     private void OnTriggerEnter(Collider other) {

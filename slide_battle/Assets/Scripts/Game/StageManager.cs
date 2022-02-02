@@ -36,7 +36,7 @@ public class StageManager : Singleton<StageManager>
     }
 
     public bool IsStageCleared() {
-        if(currentStage.enemySpawnerSetting.totalObjectSpawnCount <= currentStageScore+(currentStage.givenPlayerHp-LifeManager.GetInstance().GetCurrentLife())) {
+        if(currentStage.enemySpawnerSetting.totalObjectSpawnCount*10 <= currentStageScore+(currentStage.givenPlayerHp-LifeManager.GetInstance().GetCurrentLife())*10) {
             return true;
         }
         return false;
